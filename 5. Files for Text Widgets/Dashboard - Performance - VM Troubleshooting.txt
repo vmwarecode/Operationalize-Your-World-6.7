@@ -1,0 +1,55 @@
+
+<!-- Source: http://www.w3schools.com/css/tryit.asp?filename=trycss_table_fancy -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#customers {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    line-height: 150%;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
+</style>
+</head>
+<body>
+
+<table id="customers">
+  <tr>
+    <td>
+This dashboard is driven from another dashboard: Single VM Monitoring  
+    </td>
+  </tr>
+  <tr>
+    <td>
+Start from that dashboard first. Select a VM. <br>
+Click on Dashboard Navigation icon in the toolbar. Navigate to this dashboard.
+    </td>
+  </tr>
+  <tr>
+    <td>
+The VM performance and related datastore performance will be automatically shown.
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>

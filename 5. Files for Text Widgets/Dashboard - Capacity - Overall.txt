@@ -1,0 +1,61 @@
+
+<!-- Source: http://www.w3schools.com/css/tryit.asp?filename=trycss_table_fancy -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#customers {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    line-height: 150%;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
+</style>
+</head>
+<body>
+
+<table id="customers">
+  <tr>
+    <td>
+Use this dashboard to compare capacity across clusters. It considers Performance and Utilization
+    </td>
+  </tr>
+  <tr>
+    <td>
+Performance is measured by the percentage times the cluster unable to serve its VMs, as per the cluster Performance SLA. <br>
+Utilization is measured by the highest among CPU & RAM utilization. It is Nett Usable, taking into account HA and 10% Buffer (in super metric)
+    </td>
+  </tr>
+  <tr>
+    <td>
+As Data is time series, we take the last 2 months data, and then project it. This is more accurate than taking percentile as it consider patterns. Max is too conservative, and Average is too aggressive.
+    </td>
+  </tr>
+  <tr>
+    <td>
+Data is color coded. Green, Yellow, Orange, Red. To configure the threshold, simply edit the widget
+    </td>
+  </tr>
+
+</table>
+
+</body>
+</html>

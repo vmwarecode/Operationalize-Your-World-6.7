@@ -1,0 +1,131 @@
+{
+   "customGroups": [
+      {
+         "resourceKind": "Application Tier",
+         "membershipDefinition": {"ruleGroups": [{
+            "resourceKind": "VirtualMachine",
+            "adapterKind": "VMWARE",
+            "rules": [{
+               "ruleType": "ResourceNameRule",
+               "ruleStringOperator": "CONTAINS",
+               "ruleStringValue": "ST_L"
+            }]
+         }]},
+         "adapterKind": "Container",
+         "autoResolveMembership": true,
+         "name": "Zeus App Tier",
+         "description": "",
+         "started": true
+      },
+      {
+         "resourceKind": "Application Tier",
+         "membershipDefinition": {"ruleGroups": [{
+            "resourceKind": "VirtualMachine",
+            "adapterKind": "VMWARE",
+            "rules": [{
+               "ruleType": "ResourceNameRule",
+               "ruleStringOperator": "CONTAINS",
+               "ruleStringValue": "nimbus"
+            }]
+         }]},
+         "adapterKind": "Container",
+         "autoResolveMembership": false,
+         "name": "Titan App Tier",
+         "description": "",
+         "started": true
+      },
+      {
+         "resourceKind": "Application Tier",
+         "membershipDefinition": {"ruleGroups": [{
+            "resourceKind": "VirtualMachine",
+            "adapterKind": "VMWARE",
+            "rules": [
+               {
+                  "ruleType": "ResourceNameRule",
+                  "ruleStringOperator": "CONTAINS",
+                  "ruleStringValue": "win"
+               },
+               {
+                  "ruleOperator": "EQUALS",
+                  "ruleValue": 1,
+                  "ruleType": "NumericMetricPropertyRule",
+                  "ruleMetricKey": "sys|poweredOn",
+                  "isProperty": false
+               }
+            ]
+         }]},
+         "adapterKind": "Container",
+         "autoResolveMembership": true,
+         "name": "Herod App Tier",
+         "description": "",
+         "started": true
+      },
+      {
+         "resourceKind": "Multi-tier Applications",
+         "membershipDefinition": {"ruleGroups": [{
+            "resourceKind": "Application Tier",
+            "adapterKind": "Container",
+            "rules": [{
+               "ruleType": "ResourceNameRule",
+               "ruleStringOperator": "CONTAINS",
+               "ruleStringValue": "Herod"
+            }]
+         }]},
+         "adapterKind": "Container",
+         "autoResolveMembership": true,
+         "name": "Herod Apps",
+         "description": "",
+         "started": true
+      },
+      {
+         "resourceKind": "Multi-tier Applications",
+         "membershipDefinition": {"ruleGroups": [{
+            "resourceKind": "Application Tier",
+            "adapterKind": "Container",
+            "rules": [{
+               "ruleType": "ResourceNameRule",
+               "ruleStringOperator": "CONTAINS",
+               "ruleStringValue": "Titan"
+            }]
+         }]},
+         "adapterKind": "Container",
+         "autoResolveMembership": true,
+         "name": "Titan Apps",
+         "description": "",
+         "started": true
+      },
+      {
+         "resourceKind": "Multi-tier Applications",
+         "membershipDefinition": {"ruleGroups": [{
+            "resourceKind": "Application Tier",
+            "adapterKind": "Container",
+            "rules": [{
+               "ruleType": "ResourceNameRule",
+               "ruleStringOperator": "CONTAINS",
+               "ruleStringValue": "Zeus"
+            }]
+         }]},
+         "adapterKind": "Container",
+         "autoResolveMembership": true,
+         "name": "Zeus Apps",
+         "description": "",
+         "started": true
+      }
+   ],
+   "customGroupTypes": [
+      {
+         "resourceKind": "Multi-tier Applications",
+         "localization": [{
+            "resourceKindName": "Multi-tier Applications",
+            "locale": "en"
+         }]
+      },
+      {
+         "resourceKind": "Application Tier",
+         "localization": [{
+            "resourceKindName": "Application Tier",
+            "locale": "en"
+         }]
+      }
+   ]
+}

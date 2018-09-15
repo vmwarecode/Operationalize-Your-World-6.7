@@ -1,0 +1,161 @@
+{"customGroups": [
+   {
+      "resourceKind": "Class of Service",
+      "membershipDefinition": {"ruleGroups": [
+         {
+            "resourceKind": "ClusterComputeResource",
+            "adapterKind": "VMWARE",
+            "rules": [{
+               "ruleTravesalSpec": "Custom Datacenters-VMWARE-CustomDatacenter",
+               "ruleRelationshipType": "DESCENDANT",
+               "ruleType": "RelationshipRule",
+               "ruleStringOperator": "CONTAINS",
+               "ruleStringValue": "Gold"
+            }]
+         },
+         {
+            "resourceKind": "VirtualMachine",
+            "adapterKind": "VMWARE",
+            "rules": [{
+               "ruleTravesalSpec": "Custom Datacenters-VMWARE-CustomDatacenter",
+               "ruleRelationshipType": "DESCENDANT",
+               "ruleType": "RelationshipRule",
+               "ruleStringOperator": "CONTAINS",
+               "ruleStringValue": "Gold"
+            }]
+         },
+         {
+            "resourceKind": "Datastore",
+            "adapterKind": "VMWARE",
+            "rules": [
+               {
+                  "ruleTravesalSpec": "Custom Datacenters-VMWARE-CustomDatacenter",
+                  "ruleRelationshipType": "DESCENDANT",
+                  "ruleType": "RelationshipRule",
+                  "ruleStringOperator": "CONTAINS",
+                  "ruleStringValue": "Gold"
+               },
+               {
+                  "ruleType": "StringMetricPropertyRule",
+                  "ruleMetricKey": "summary|isLocal",
+                  "isProperty": true,
+                  "ruleStringOperator": "EQUALS",
+                  "ruleStringValue": "false"
+               }
+            ]
+         }
+      ]},
+      "adapterKind": "Container",
+      "autoResolveMembership": true,
+      "name": "Tier 1 (Gold)",
+      "description": "",
+      "started": true,
+      "policy": "58e3ff46-e26b-4eef-a37f-346d3a48a163"
+   },
+   {
+      "resourceKind": "Class of Service",
+      "membershipDefinition": {"ruleGroups": [
+         {
+            "resourceKind": "ClusterComputeResource",
+            "adapterKind": "VMWARE",
+            "rules": [{
+               "ruleTravesalSpec": "Custom Datacenters-VMWARE-CustomDatacenter",
+               "ruleRelationshipType": "DESCENDANT",
+               "ruleType": "RelationshipRule",
+               "ruleStringOperator": "CONTAINS",
+               "ruleStringValue": "silver"
+            }]
+         },
+         {
+            "resourceKind": "VirtualMachine",
+            "adapterKind": "VMWARE",
+            "rules": [{
+               "ruleTravesalSpec": "Custom Datacenters-VMWARE-CustomDatacenter",
+               "ruleRelationshipType": "DESCENDANT",
+               "ruleType": "RelationshipRule",
+               "ruleStringOperator": "CONTAINS",
+               "ruleStringValue": "silver"
+            }]
+         },
+         {
+            "resourceKind": "Datastore",
+            "adapterKind": "VMWARE",
+            "rules": [
+               {
+                  "ruleTravesalSpec": "Custom Datacenters-VMWARE-CustomDatacenter",
+                  "ruleRelationshipType": "DESCENDANT",
+                  "ruleType": "RelationshipRule",
+                  "ruleStringOperator": "CONTAINS",
+                  "ruleStringValue": "silver"
+               },
+               {
+                  "ruleType": "StringMetricPropertyRule",
+                  "ruleMetricKey": "summary|isLocal",
+                  "isProperty": true,
+                  "ruleStringOperator": "EQUALS",
+                  "ruleStringValue": "false"
+               }
+            ]
+         }
+      ]},
+      "adapterKind": "Container",
+      "autoResolveMembership": true,
+      "name": "Tier 2 (Silver)",
+      "description": "",
+      "started": true,
+      "policy": "0903095a-fcef-4516-b96c-9f18792e8990"
+   },
+   {
+      "resourceKind": "Class of Service",
+      "membershipDefinition": {"ruleGroups": [
+         {
+            "resourceKind": "ClusterComputeResource",
+            "adapterKind": "VMWARE",
+            "rules": [{
+               "ruleTravesalSpec": "Custom Datacenters-VMWARE-CustomDatacenter",
+               "ruleRelationshipType": "DESCENDANT",
+               "ruleType": "RelationshipRule",
+               "ruleStringOperator": "CONTAINS",
+               "ruleStringValue": "bronze"
+            }]
+         },
+         {
+            "resourceKind": "VirtualMachine",
+            "adapterKind": "VMWARE",
+            "rules": [{
+               "ruleTravesalSpec": "Custom Datacenters-VMWARE-CustomDatacenter",
+               "ruleRelationshipType": "DESCENDANT",
+               "ruleType": "RelationshipRule",
+               "ruleStringOperator": "CONTAINS",
+               "ruleStringValue": "bronze"
+            }]
+         },
+         {
+            "resourceKind": "Datastore",
+            "adapterKind": "VMWARE",
+            "rules": [
+               {
+                  "ruleType": "StringMetricPropertyRule",
+                  "ruleMetricKey": "summary|isLocal",
+                  "isProperty": true,
+                  "ruleStringOperator": "EQUALS",
+                  "ruleStringValue": "false"
+               },
+               {
+                  "ruleTravesalSpec": "Custom Datacenters-VMWARE-CustomDatacenter",
+                  "ruleRelationshipType": "DESCENDANT",
+                  "ruleType": "RelationshipRule",
+                  "ruleStringOperator": "CONTAINS",
+                  "ruleStringValue": "bronze"
+               }
+            ]
+         }
+      ]},
+      "adapterKind": "Container",
+      "autoResolveMembership": true,
+      "name": "Tier 3 (Bronze)",
+      "description": "",
+      "started": true,
+      "policy": "db9088c1-e90d-48f1-a17c-287686438714"
+   }
+]}

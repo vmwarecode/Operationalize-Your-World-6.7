@@ -1,1 +1,0 @@
-# Operationalize-Your-World-6.7
